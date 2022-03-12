@@ -1,0 +1,9 @@
+TYPE SYSTEMS
+
+Most programming languages are distinguished by several characteristics which may include some kind of type system which sets the categories of objects to be worked with and how they will be handled.
+Type systems can be further classified into two major groups namely;
+* Dynamic Type systems
+* Static Type systems
+
+#### Dynamic Type systems
+Python can be characterized as one having a dynamic type system
