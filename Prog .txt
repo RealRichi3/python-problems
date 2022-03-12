@@ -1,6 +1,10 @@
 TYPE SYSTEMS
 
-Most programming languages are distinguished by several characteristics which may include some kind of type system which sets the categories of objects to be worked with and how they will be handled.
+Most programming languages are distinguished by several characteristics which may include some kind of type system which sets the categories of objects to be worked with and how they will be handled, i.e there are certain types and each type has a set of rules governing the different possible operations. A good example is a String type, in python the operations for strings only include print, split and concatenation.
+Programming languages can have strong and weak type languages, theres no absolute distinction between strong and weak type language. 
+
+Strong Type systems
+ 
 Type systems can be further classified into two major groups namely;
 * Dynamic Type systems
 * Static Type systems
