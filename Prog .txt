@@ -1,5 +1,6 @@
 TYPE SYSTEMS
 
+<<<<<<< HEAD
 Type systems are basically made of different types and these types are referred to as data types some examples of pre-defined data types are strings, integers and bools. Most programming languages are distinguished by several characteristics which may include some kind of type system which sets the categories of objects to be worked with and how they will be handled.
 
 Taking python as an example, we'll be considering two of the pre-defined data types, strings and int. For strings a set of rules are applied, i.e they can be concatenated, split, iterable etc. On the other hand, integers can be added and subtracted, trying to add an int and a string would throw a type error because it's against the rule set.
@@ -9,6 +10,13 @@ Taking python as an example, we'll be considering two of the pre-defined data ty
 The example above is a python interactive shell, two variables A and B were assigned different data, with different data types 1 as an integer and Richie as a string.
 
 Passing the two variables through the type function, it pops a <type 'int'> for A and a <type 'str'> for B each having different sets of rules following thier operations, o 
+=======
+Most programming languages are distinguished by several characteristics which may include some kind of type system which sets the categories of objects to be worked with and how they will be handled, i.e there are certain types and each type has a set of rules governing the different possible operations. A good example is a String type, in python the operations for strings only include print, split and concatenation.
+Programming languages can have strong and weak type languages, theres no absolute distinction between strong and weak type language. 
+
+Strong Type systems
+ 
+>>>>>>> 3ba571b7b802c48c2ec9d5160a3ae8bdddab4290
 Type systems can be further classified into two major groups namely;
 * Dynamic Type systems
 * Static Type systems

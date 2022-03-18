@@ -1,23 +1,50 @@
-"""
-SEND + MORE = MONEY
-"""
 
-def checkDict(mydict):
-    pass
 
-word = 'SENDMORNY'
-wordDict = {}
 
-for letter in word:             # Append all the letters to the dictionary as Keys and use 0 as the default Value
-    wordDict[letter] = 10
-    
-wordlist = list(wordDict.keys())
-count = 0
-for key in wordDict.keys():     # Iterate through the keys SENDMORY
-    for num in range(0,8):      # Assigns different num from 0 to 8 to each element
-        if num not in wordDict.values():    # Check if value is already given to a key
-            wordDict[wordlist[num]] = num
-        else:
-            pass
-        count += 1
-    print(wordDict)
+
+solutionlist = []
+
+valueList = []
+def listAp(i):
+    if i not in valueList:
+        valueList.append(i)
+        return True
+    else:
+        return False
+
+def condCheck(s,e,n,d,m,o,r,y):
+    send = 1000 * s + 100 * e + 10 * n + d
+    more = 1000 * m + 100 * o + 10 * r + e
+    money = 10000 * m + 1000 * o + 100 * n + 10 * e + y
+    print('{} + {} = {}'.format(send, more, money))
+
+    # if len(set(letters)) == len(letters):
+    print("Checking condition")
+    if send + more == money:
+        print('{} + {} = {}'.format(send, more, money))
+        print(valueList)
+        valueList = []
+
+
+def solution():
+    for s in range(9, 0, -1):
+        if listAp(s) == True:
+            for e in range(9, -1, -1):
+                if listAp(e) == True:
+                    for n in range(9, -1, -1):
+                        if listAp(n) == True:
+                            for d in range(9, -1, -1):
+                                if listAp(d) == True:
+                                    for m in range(9, 0, -1):
+                                        if listAp(m) == True:
+                                            for o in range(9, -1, -1):
+                                                if listAp(o) == True:
+                                                    for r in range(9, -1, -1):
+                                                        if listAp(r) == True:
+                                                            for y in range(9, -1, -1):
+                                                                if listAp(y) ==True:
+                                                                    condCheck(s,e,n,d,m,o,r,y)
+
+letters = list('sendmory')
+print(solution())
+                                
