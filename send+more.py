@@ -10,20 +10,22 @@ def listAp(i):
         valueList.append(i)
         return True
     else:
-        return False
+        pass
 
 def condCheck(s,e,n,d,m,o,r,y):
-    send = 1000 * s + 100 * e + 10 * n + d
-    more = 1000 * m + 100 * o + 10 * r + e
-    money = 10000 * m + 1000 * o + 100 * n + 10 * e + y
-    print('{} + {} = {}'.format(send, more, money))
-
-    # if len(set(letters)) == len(letters):
+    global valueList
+    # send = 1000 * s + 100 * e + 10 * n + d
+    # more = 1000 * m + 100 * o + 10 * r + e
+    # money = 10000 * m + 1000 * o + 100 * n + 10 * e + y
+    
+    # print('{} + {} = {}'.format(valueList[:4], more, money))
+    print(valueList)
+    
     print("Checking condition")
-    if send + more == money:
-        print('{} + {} = {}'.format(send, more, money))
-        print(valueList)
-        valueList = []
+    # if send + more == money:
+    #     print('{} + {} = {}'.format(send, more, money))
+    #     print(valueList)
+    valueList = []
 
 
 def solution():
