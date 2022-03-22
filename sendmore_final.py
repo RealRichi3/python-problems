@@ -50,7 +50,7 @@ def rand_add(dict_x):
 
 def check_equation(dict_y):
     """
-        Function to test check if the parameters satisfy the equation
+        Function to check if the parameters satisfy the equation
     """
     global tested_values
     global true_or_false
@@ -88,6 +88,6 @@ while true_or_false == True:
     num_dict = rand_add(num_dict)
     check_equation(num_dict)
    
-   
+
 print(num_dict)
 print(">>>>>>>>>>>>>>>>>>>>>>>>> Time spent: {} ".format(time.time() - start_time))
