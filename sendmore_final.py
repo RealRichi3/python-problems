@@ -15,8 +15,6 @@ check equation.
 """
 import random
 
-
-
 def create_dict():
     """
         Add intial letters as keys to the Dictionary    
@@ -27,21 +25,68 @@ def create_dict():
     for letters in 'sendmory':                                  
         num_dict[letters] = None
 
+    return num_dict
+   
 def rand_add(dict_x):
     """
         Set unique random numbers as values to the letters(keys in the dict) 
     """
+    while True:
+        for letters in dict_x.keys():
+            num = random.randint(0,9)                               # Assign random number to num
+            while True:
+                if num not in dict_x.values():                      # Check if number is already assiged to a key in the dictionay
+                    dict_x[letters] = num
+                    break
+                else:
+                    num = random.randint(0,9)                       # If number is  already assigned, choose a new random number
+        if list(dict_x.values()) not in tested_values:              # Check if this combination of numbers has been used 
+            break
+        else:
+            dict_x = create_dict()
 
-    for letters in dict_x.keys():
-        num = random.randint(0,9)                               # Assign random number to num
-        while True:
-            if num not in dict_x.values():                      # Check if number is already assiged to a key in the dictionay
-                dict_x[letters] = num
-                break
-            else:
-                num = random.randint(0,9)                       # If number is  already assigned, choose a new random number
     return dict_x
 
 def check_equation(dict_y):
-    # for i
+    """
+        Function to test check if the parameters satisfy the equation
+    """
+    global tested_values
+    global true_or_false
+    
+    valueList = list(dict_y.values())
+    
+    s = int(valueList[0])               # Convert string of all the numbers in ValueList to int
+    e = int(valueList[1])               # and assign them to the different varialbes
+    n = int(valueList[2])
+    d = int(valueList[3])
+    m = int(valueList[4])
+    o = int(valueList[5])
+    r = int(valueList[6])
+    y = int(valueList[7])
+
+    send = 1000 * s + 100 * e + 10 * n + d
+    more = 1000 * m + 100 * o + 10 * r + e
+    money = 10000 * m + 1000 * o + 100 * n + 10 * e + y
+
+    if send + more == money:
+        print("{} + {} = {}".format(send, more, money))
+        true_or_false = False
+    else:
+        tested_values.append(list(dict_y.values()))     # Adds the combination of values to the list of tested values
+
+
+tested_values = []
+true_or_false = True
+count = 0
+
+while true_or_false == True:
+    count += 1
+    num_dict = create_dict()
+    num_dict = rand_add(num_dict)
+    check_equation(num_dict)
+    # if count % 10 == 0:
+        # print(count)
+        # print(tested_values)
+print(">>>>>>>>>>>>>>>>>>>>>>>>> {} ".format(count))
 
