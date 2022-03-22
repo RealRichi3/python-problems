@@ -14,6 +14,7 @@ randomly add dict key - check first if it exists
 check equation.
 """
 import random
+import time
 
 def create_dict():
     """
@@ -65,9 +66,9 @@ def check_equation(dict_y):
     r = int(valueList[6])
     y = int(valueList[7])
 
-    send = 1000 * s + 100 * e + 10 * n + d
-    more = 1000 * m + 100 * o + 10 * r + e
-    money = 10000 * m + 1000 * o + 100 * n + 10 * e + y
+    send = int(str("{}{}{}{}".format(s,e,n,d)))
+    more = int(str("{}{}{}{}".format(m,o,r,e)))
+    money = int(str("{}{}{}{}{}".format(m,o,n,e,y)))
 
     if send + more == money:
         print("{} + {} = {}".format(send, more, money))
@@ -76,17 +77,17 @@ def check_equation(dict_y):
         tested_values.append(list(dict_y.values()))     # Adds the combination of values to the list of tested values
 
 
+
 tested_values = []
 true_or_false = True
-count = 0
+
+start_time = time.time()
 
 while true_or_false == True:
-    count += 1
     num_dict = create_dict()
     num_dict = rand_add(num_dict)
     check_equation(num_dict)
-    # if count % 10 == 0:
-        # print(count)
-        # print(tested_values)
-print(">>>>>>>>>>>>>>>>>>>>>>>>> {} ".format(count))
-
+   
+   
+print(num_dict)
+print(">>>>>>>>>>>>>>>>>>>>>>>>> Time spent: {} ".format(time.time() - start_time))
