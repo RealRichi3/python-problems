@@ -42,11 +42,9 @@ def solution():
         N = len(number)
         if N == 7:
             number = '0' + number
-            if len(set(number)) == 8:
-                S,E,N,D,M,O,R,Y = number
-                if int(S+E+N+D) + int(M+O+R+E)  == int(M+O+N+E+Y):
-                    posssible_solutions.append(number)
-        elif N == 8:
+            N += 1
+        
+        if N == 8:
             if len(set(number)) == 8:
                 S,E,N,D,M,O,R,Y = number
                 if int(S+E+N+D) + int(M+O+R+E)  == int(M+O+N+E+Y):
